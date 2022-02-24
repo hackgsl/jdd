@@ -17,7 +17,8 @@ repo5='Wenmoux_scripts_wen_chinnkarahoi'           #预设的 Wenmoux 仓库，�
 repo6='Aaron-lv_sync_jd_scripts'                   #预设的 Aaron-lv 仓库
 repo7='smiek2221_scripts'                          #预设的 smiek2221 仓库
 repo8='gys619_jdd'
-repo="$repo8"                                            #空值，表示遍历所有仓库脚本日志
+repo9='hackgsl_jdd'
+repo="$repo9"                                            #空值，表示遍历所有仓库脚本日志
 
 ## 调试模式开关，默认是0，表示关闭；设置为1，表示开启
 DEBUG="1"
