@@ -10,13 +10,13 @@
 ### [TG频道](https://t.me/jddfruit)
 ## 青龙拉取链接
 ``` 
-ql repo https://github.com/gys619/jdd.git "jd_|jx_|jddj_|gua_|getJDCookie|wskey" "activity|backUp" "^jd[^_]|USER|utils|ZooFaker_Necklace|JDJRValidator_|sign_graphics_validate|jddj_cookie|function|ql|magic|JDJR|JD""
+ql repo https://github.com/hackgsl/jdd.git "jd_|jx_|jddj_|gua_|getJDCookie|wskey" "activity|backUp" "^jd[^_]|USER|utils|ZooFaker_Necklace|JDJRValidator_|sign_graphics_validate|jddj_cookie|function|ql|magic|JDJR|JD""
 ```
 ```
 推荐定时 0 */4 * * *
 ```
 
-[兜兜风评价助手1.6测试版](https://github.com/gys619/gys/blob/main/doudoufeng/%E5%85%9C%E5%85%9C%E9%A3%8E%E7%9A%84%E4%B8%9C%E4%BA%AC%E8%AF%84%E4%BB%B7%E5%8A%A9%E6%89%8B(%E6%B5%8B%E8%AF%95%E7%89%88)%201.7.exe?raw=true)
+[兜兜风评价助手1.6测试版](https://github.com/hackgsl/gys/blob/main/doudoufeng/%E5%85%9C%E5%85%9C%E9%A3%8E%E7%9A%84%E4%B8%9C%E4%BA%AC%E8%AF%84%E4%BB%B7%E5%8A%A9%E6%89%8B(%E6%B5%8B%E8%AF%95%E7%89%88)%201.7.exe?raw=true)
 
 [退会：JDMemberCloseAccount](https://github.com/yqchilde/JDMemberCloseAccount)
 
@@ -26,7 +26,7 @@ docker exec -it 容器名 bash
 
 cd repo
 
-rm -rf gys619_jdd
+rm -rf hackgsl_jdd
 
 ##### jd_lzdz1_xxxxx.js开卡脚本取消了，有需要用青蛙的开卡
 
@@ -50,7 +50,7 @@ rm -rf gys619_jdd
     ```
     docker exec -it 容器名 bash
     cd repo
-    rm -rf gys619_jdd
+    rm -rf hackgsl_jdd
     ```
 
 * 加了[Oreomeow大佬](https://raw.githubusercontent.com/Oreomeow/VIP/main/Conf/Qinglong/config.sample.sh)的config模板,名字是jd_config.sample.sh
@@ -59,10 +59,10 @@ rm -rf gys619_jdd
   ```
    #ql repo命令拉取脚本时需要拉取的文件后缀，直接写文件后缀名即可
    RepoFileExtensions="js py ts"
-   ```
+  ```
 
  
- 
+
 </details>
 
 ### 安装青龙需要一些的依赖
@@ -286,11 +286,11 @@ ql repo https://github.com/longzhuzhu/nianyu.git "qx"
 ql repo https://github.com/panghu999/panghu.git "jd_"
 ```
 </details>
- 
+
  
 
  
- 
+
  
 
 ### 致谢
