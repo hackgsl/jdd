@@ -1,13 +1,29 @@
-## 适配了qqbot、quanx和loon
-# 说明
- * 发现脚本重复的可以提pr到.gitignore文件，欢迎多提PR。
- * 因为仓库本身是脚本自己同步，有的仓库名字不一样难免又很多重复的。
- * 有互助码没删干净的可以提醒我一下，感谢！
- * 个人研究学习自用，主要是为了自己方便
- * 合集加的最后结尾大佬们脚本,删了互助码和互助池，gua佬没删，需要互助池的可以用他们合集，结尾已经放了链接
- * 想用谁的合集都可以，结尾有其他大佬们的合集或者看Oreomeow大佬整理的那些
-### [TG群](https://t.me/jdd_fruit)
-### [TG频道](https://t.me/jddfruit)
+### 说明 :
+
+- 搬运大佬脚本。
+- 搬运自用。
+
+### 
+
+### 特别声明:
+
+- 本仓库发布的MyActions项目中涉及的任何解锁和解密分析脚本，仅用于测试和学习研究，禁止用于商业用途，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断.
+- 本项目内所有资源文件，禁止任何公众号、自媒体进行任何形式的转载、发布。
+- 本仓库拥有者对任何脚本问题概不负责，包括但不限于由任何脚本错误导致的任何损失或损害.
+- 间接使用脚本的任何用户，包括但不限于建立VPS或在某些行为违反国家/地区法律或相关法规的情况下进行传播, 本仓库拥有者对于由此引起的任何隐私泄漏或其他后果概不负责.
+- 请勿将MyActions项目的任何内容用于商业或非法目的，否则后果自负.
+- 如果任何单位或个人认为该项目的脚本可能涉嫌侵犯其权利，则应及时通知并提供身份证明，所有权证明，我们将在收到认证文件后删除相关脚本.
+- 任何以任何方式查看此项目的人或直接或间接使用该MyActions项目的任何脚本的使用者都应仔细阅读此声明。本仓库拥有者保留随时更改或补充此免责声明的权利。一旦使用并复制了任何相关脚本或MyActions项目的规则，则视为您已接受此免责声明.
+
+**您必须在下载后的24小时内从计算机或手机中完全删除以上内容.**  
+ ***您使用或者复制了本仓库且本人制作的任何脚本，则视为`已接受`此声明，请仔细阅读***
+
+### 
+
+### 即日起，本仓库仅用于个人学习使用，不提供相关使用教程
+
+### 
+
 ## 青龙拉取链接
 ``` 
 ql repo https://github.com/hackgsl/jdd.git "jd_|jx_|jddj_|gua_|getJDCookie|wskey" "activity|backUp" "^jd[^_]|USER|utils|ZooFaker_Necklace|JDJRValidator_|sign_graphics_validate|jddj_cookie|function|ql|magic|JDJR|JD""
@@ -28,48 +44,11 @@ cd repo
 
 rm -rf hackgsl_jdd
 
-##### jd_lzdz1_xxxxx.js开卡脚本取消了，有需要用青蛙的开卡
 
-### 脚本说明
-<details>
-<summary>查看</summary>
-
-加了一件安装依赖脚本
-
-* 想跑gua开卡的可以加,false改成true
-    ```
-    export guaopencard_All="false"
-    export guaopencard_addSku_All="false"
-    export guaopencardRun_All="false"
-    export guaopencard_draw="false"
-    ```
-* 去掉多余的双十一红包脚本，自己再config里加export FLCODE=''，否则不能跑
-* 内部互助可以把code.sh和task_before.sh放config目录下，并添加一个code的定时任务，命令:task /ql/config/code.sh
-* 加KingRan大佬仓库
-* 最新面板2.9.7或者新版拉不到可以进入容器
-    ```
-    docker exec -it 容器名 bash
-    cd repo
-    rm -rf hackgsl_jdd
-    ```
-
-* 加了[Oreomeow大佬](https://raw.githubusercontent.com/Oreomeow/VIP/main/Conf/Qinglong/config.sample.sh)的config模板,名字是jd_config.sample.sh
-* 财富岛新手任务开木板
-  * 修改青龙配置文件,如下,加个ts
-  ```
-   #ql repo命令拉取脚本时需要拉取的文件后缀，直接写文件后缀名即可
-   RepoFileExtensions="js py ts"
-  ```
-
- 
-
-</details>
 
 ### 安装青龙需要一些的依赖
 <details>
 <summary>查看依赖列表</summary>
-
-
 * 最新青龙支持安装依赖需要啥依赖，去依赖管理添加即可，简单方便
 * 遇到Cannot find module 'xxxxxx'报错就进入青龙容器
 * docker exec -it QL(自己容器名) bash
@@ -109,16 +88,13 @@ rm -rf hackgsl_jdd
 * npm install -g @types/node
 * npm install -g requests
 
-</details>
-
 
 
 ### 青龙拉取常用京东脚本库([Oreomeow大佬](https://github.com/Oreomeow/VIP/blob/main/Tasks/qlrepo/Readme.md)整理的一些仓库)
 <details>
 <summary>京东脚本库</summary>
- 
+ 说明
 
-#### 说明
  - 更新一个整库脚本
  ```
  ql repo <repourl> <path> <blacklist> <dependence> <branch>
@@ -285,12 +261,6 @@ ql repo https://github.com/longzhuzhu/nianyu.git "qx"
 ```
 ql repo https://github.com/panghu999/panghu.git "jd_"
 ```
-</details>
-
- 
-
- 
-
  
 
 ### 致谢
