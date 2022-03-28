@@ -1,5 +1,5 @@
 /*
-种豆得豆 脚本更新地址：https://raw.githubusercontent.com/222222/sync/jd_scripts/jd_plantBean.js
+种豆得豆 脚本更新地址：https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_plantBean.js
 更新时间：2021-04-9
 活动入口：京东APP我的-更多工具-种豆得豆
 已支持IOS京东多账号,云端多京东账号
@@ -9,17 +9,17 @@
 每个京东账号每天只能帮助3个人。多出的助力码将会助力失败。
 =====================================Quantumult X=================================
 [task_local]
-1 7-21/2 * * * https://raw.githubusercontent.com/222222/sync/jd_scripts/jd_plantBean.js, tag=种豆得豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdzd.png, enabled=true
+1 7-21/2 * * * https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_plantBean.js, tag=种豆得豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdzd.png, enabled=true
 
 =====================================Loon================================
 [Script]
-cron "1 7-21/2 * * *" script-path=https://raw.githubusercontent.com/222222/sync/jd_scripts/jd_plantBean.js,tag=京东种豆得豆
+cron "1 7-21/2 * * *" script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_plantBean.js,tag=京东种豆得豆
 
 ======================================Surge==========================
-京东种豆得豆 = type=cron,cronexp="1 7-21/2 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/222222/sync/jd_scripts/jd_plantBean.js
+京东种豆得豆 = type=cron,cronexp="1 7-21/2 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_plantBean.js
 
 ====================================小火箭=============================
-京东种豆得豆 = type=cron,script-path=https://raw.githubusercontent.com/222222/sync/jd_scripts/jd_plantBean.js, cronexpr="1 7-21/2 * * *", timeout=3600, enable=true
+京东种豆得豆 = type=cron,script-path=https://raw.githubusercontent.com/Aaron-lv/sync/jd_scripts/jd_plantBean.js, cronexpr="1 7-21/2 * * *", timeout=3600, enable=true
 
 */
 const $ = new Env('京东种豆得豆');
@@ -33,7 +33,7 @@ const JD_API_HOST = 'https://api.m.jd.com/client.action';
 //此此内容是IOS用户下载脚本到本地使用，填写互助码的地方，同一京东账号的好友互助码请使用@符号隔开。
 //下面给出两个账号的填写示例（iOS只支持2个京东账号）
 let shareCodes = [ // IOS本地脚本用户这个列表填入你要助力的好友的shareCode
-  //账号一的好友shareCode,不同好友的shareCode中间用@符号隔开
+                   //账号一的好友shareCode,不同好友的shareCode中间用@符号隔开
   '',
   //账号二的好友shareCode,不同好友的shareCode中间用@符号隔开
   '',
@@ -262,6 +262,12 @@ async function doTask() {
         await shopTaskList();
         const { data } = $.shopTaskListRes;
         let goodShopListARR = [], moreShopListARR = [], shopList = [];
+        if (!data.goodShopList) {
+          data.goodShopList = [];
+        }
+        if (!data.moreShopList) {
+          data.moreShopList = [];
+        }
         const { goodShopList, moreShopList } = data;
         for (let i of goodShopList) {
           if (i.taskState === '2') {
@@ -541,11 +547,11 @@ async function plantBeanIndex() {
 }
 function readShareCode() {
   return new Promise(async resolve => {
-    $.get({url: `http://111111/bean`, timeout: 10000}, (err, resp, data) => {
+    $.get({url: ``, timeout: 10000}, (err, resp, data) => {
       try {
         if (err) {
-          console.log(JSON.stringify(err))
-          console.log(`${$.name} API请求失败，请检查网路重试`)
+          //console.log(JSON.stringify(err))
+          //console.log(`${$.name} API请求失败，请检查网路重试`)
         } else {
           if (data) {
             console.log(`随机取个${randomCount}码放到您固定的互助码后面(不影响已有固定互助)`)
